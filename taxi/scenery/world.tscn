@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjy11s7o4sqyp"]
+[gd_scene load_steps=8 format=3 uid="uid://cjy11s7o4sqyp"]
 
 [ext_resource type="PackedScene" uid="uid://2f2dbmnk18yf" path="res://scenery/town.tscn" id="1_xg2ei"]
 [ext_resource type="PackedScene" uid="uid://ccjhokf7ce21x" path="res://scenery/player.tscn" id="2_hqpy3"]
@@ -16,6 +16,17 @@ sky = SubResource("Sky_rn4at")
 tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_xg2ei"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqpy3"]
+bg_color = Color(0.6, 0.6, 0.6, 0.15294118)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 150
+corner_radius_top_right = 150
+corner_radius_bottom_right = 150
+corner_radius_bottom_left = 150
 
 [node name="World" type="Node3D"]
 
@@ -85,13 +96,25 @@ spawn = NodePath("../spawn")
 [node name="spawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.88389, 4.4925203, -6.0958014)
 
-[node name="SubViewport" type="SubViewport" parent="."]
-transparent_bg = true
-size = Vector2i(256, 256)
-render_target_update_mode = 4
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MinimapCamera" type="Camera3D" parent="SubViewport"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 28.722322, 162.77643, -8.889702)
-projection = 1
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -260.0
+offset_bottom = 260.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqpy3")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/PanelContainer/SubViewportContainer"]
+transparent_bg = true
+size = Vector2i(250, 250)
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/PanelContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 34.762, 237.29, 75.405)
 
 [editable path="Player"]

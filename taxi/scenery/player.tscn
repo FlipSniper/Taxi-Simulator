@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://ccjhokf7ce21x"]
+[gd_scene load_steps=31 format=4 uid="uid://ccjhokf7ce21x"]
 
 [ext_resource type="Texture2D" uid="uid://cfcl1657f3irx" path="res://assets/taxi_0.png" id="1_1u2ly"]
 [ext_resource type="Script" uid="uid://bo0f7y2rixbf6" path="res://general_scripts/player.gd" id="1_fa4og"]
@@ -255,6 +255,11 @@ bottom_radius = 0.4
 height = 0.25
 radial_segments = 12
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aac0b"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_a5pw6"]
+
 [node name="Player" type="VehicleBody3D"]
 mass = 800.0
 center_of_mass_mode = 1
@@ -320,6 +325,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.6)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, -1.5180808e-08, 8.609463e-08, 0, 0.9848078, 0.1736482, -8.742278e-08, 0.1736482, -0.9848078, 0, 2.2269492, -3.68444)
+cull_mask = 1048573
 
 [node name="front_left_wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59520483, 0.19016695, 1.2647517)
@@ -386,3 +392,9 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 mesh = SubResource("CylinderMesh_fa4og")
 
 [node name="UI" parent="." instance=ExtResource("3_aac0b")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(14.402384, 0, 0, 0, 14.402384, 0, 0, 0, 14.402384, 0, 0, 0)
+layers = 2
+material_override = SubResource("StandardMaterial3D_aac0b")
+mesh = SubResource("SphereMesh_a5pw6")
