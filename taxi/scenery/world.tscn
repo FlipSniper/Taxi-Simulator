@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjy11s7o4sqyp"]
+
+[ext_resource type="PackedScene" uid="uid://2f2dbmnk18yf" path="res://scenery/town.tscn" id="1_xg2ei"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xg2ei"]
+
+[node name="World" type="Node3D"]
+
+[node name="town" type="Node3D" parent="."]
+
+[node name="town1" parent="town" instance=ExtResource("1_xg2ei")]
+
+[node name="town4" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.718666, 0, 63.918854)
+
+[node name="town5" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 118.235115, 0, 30.83163)
+
+[node name="town6" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 101.6228, 0, -16.576199)
+
+[node name="town7" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.815407, 0, -0.03751564)
+
+[node name="town2" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.516521, 0, 47.430794)
+
+[node name="town3" parent="town" instance=ExtResource("1_xg2ei")]
+
+[node name="town8" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.480095, 0, 127.893036)
+
+[node name="town9" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.238571, 0, 191.81189)
+
+[node name="town10" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 63.755016, 0, 158.72467)
+
+[node name="town11" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 47.142708, 0, 111.31683)
+
+[node name="town12" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3353119, 0, 127.85552)
+
+[node name="town13" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -37.963573, 0, 175.32382)
+
+[node name="town14" parent="town" instance=ExtResource("1_xg2ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.480095, 0, 127.893036)
+
+[node name="walls" type="Node3D" parent="town"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="town/walls"]
+transform = Transform3D(10.745, 0, 0, 0, 10.745, 0, 0, 0, 10.745, 54.638664, 0, 21.183285)
+mesh = SubResource("BoxMesh_xg2ei")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="town/walls"]
+transform = Transform3D(10.745, 0, 0, 0, 10.745, 0, 0, 0, 10.745, 0.42224503, 0, 144.84369)
+mesh = SubResource("BoxMesh_xg2ei")
