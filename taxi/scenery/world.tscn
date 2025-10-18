@@ -79,6 +79,6 @@ transform = Transform3D(10.745, 0, 0, 0, 10.745, 0, 0, 0, 10.745, 0.42224503, 0,
 mesh = SubResource("BoxMesh_xg2ei")
 
 [node name="Player" parent="town" instance=ExtResource("2_hqpy3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.714493, 0.006668687, -6.0934696)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.714493, 3.6561766, -6.0934696)
 
 [editable path="town/Player"]
