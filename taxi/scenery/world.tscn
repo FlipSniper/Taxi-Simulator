@@ -1,10 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjy11s7o4sqyp"]
+[gd_scene load_steps=7 format=3 uid="uid://cjy11s7o4sqyp"]
 
 [ext_resource type="PackedScene" uid="uid://2f2dbmnk18yf" path="res://scenery/town.tscn" id="1_xg2ei"]
+[ext_resource type="PackedScene" uid="uid://ccjhokf7ce21x" path="res://scenery/player.tscn" id="2_hqpy3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hqpy3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_rn4at"]
+sky_material = SubResource("ProceduralSkyMaterial_hqpy3")
+
+[sub_resource type="Environment" id="Environment_1okxe"]
+background_mode = 2
+sky = SubResource("Sky_rn4at")
+tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_xg2ei"]
 
 [node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1okxe")
 
 [node name="town" type="Node3D" parent="."]
 
@@ -57,3 +77,8 @@ mesh = SubResource("BoxMesh_xg2ei")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="town/walls"]
 transform = Transform3D(10.745, 0, 0, 0, 10.745, 0, 0, 0, 10.745, 0.42224503, 0, 144.84369)
 mesh = SubResource("BoxMesh_xg2ei")
+
+[node name="Player" parent="town" instance=ExtResource("2_hqpy3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.714493, 0.006668687, -6.0934696)
+
+[editable path="town/Player"]

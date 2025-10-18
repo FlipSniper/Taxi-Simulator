@@ -518,6 +518,8 @@ shadow_mesh = SubResource("ArrayMesh_u876q")
 
 [node name="Player" type="VehicleBody3D"]
 gravity_scale = 4.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.6, 0.6)
 script = ExtResource("1_fa4og")
 
 [node name="Taxi_Taxi car_0" type="MeshInstance3D" parent="."]
@@ -652,3 +654,6 @@ skeleton = NodePath("")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, -1.5180808e-08, 8.609463e-08, 0, 0.9848078, 0.1736482, -8.742278e-08, 0.1736482, -0.9848078, 0, 2.2269492, -3.68444)
+
+[node name="CentreOfMass" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.6)
