@@ -1,6 +1,7 @@
-[gd_scene load_steps=44 format=4 uid="uid://ccjhokf7ce21x"]
+[gd_scene load_steps=45 format=4 uid="uid://ccjhokf7ce21x"]
 
 [ext_resource type="Texture2D" uid="uid://cfcl1657f3irx" path="res://assets/taxi_0.png" id="1_1u2ly"]
+[ext_resource type="Script" uid="uid://bo0f7y2rixbf6" path="res://general_scripts/player.gd" id="1_fa4og"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggc4e"]
 resource_name = "Taxi_car"
@@ -515,76 +516,72 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u876q")
 
-[node name="taxi" type="VehicleBody3D"]
+[node name="Player" type="VehicleBody3D"]
+gravity_scale = 4.0
+script = ExtResource("1_fa4og")
 
 [node name="Taxi_Taxi car_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 mesh = SubResource("ArrayMesh_xf3ny")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_1u2ly")
 
 [node name="Taxi_Taxi black_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 mesh = SubResource("ArrayMesh_hhssc")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_fa4og")
 
 [node name="Taxi_Taxi TEXTURE_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 mesh = SubResource("ArrayMesh_7c4nl")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_aac0b")
 
 [node name="Taxi_Glass_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 mesh = SubResource("ArrayMesh_snpr7")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_a5pw6")
 
 [node name="Taxi_White lights_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 mesh = SubResource("ArrayMesh_3hgvq")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_37nmn")
 
 [node name="Taxi_Yellow lights_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 mesh = SubResource("ArrayMesh_t4l0i")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-visible = false
 shape = SubResource("ConvexPolygonShape3D_qh6nc")
 
 [node name="FrontLeft" type="VehicleWheel3D" parent="."]
 transform = Transform3D(2.1061629e-08, 0, 0.23479326, -0.27896973, -4.5449937e-08, 1.7726398e-08, 4.5449937e-08, -0.27896973, -2.8879967e-15, 0.67868507, 0.23582572, 1.2889229)
+use_as_steering = true
+wheel_roll_influence = 0.01
+wheel_rest_length = 0.2
+wheel_friction_slip = 1.4
+suspension_travel = 0.15
+suspension_stiffness = 120.0
 
 [node name="Front tire_1_Tyre_0" type="MeshInstance3D" parent="FrontLeft"]
 transform = Transform3D(0.99999994, 0, 7.1054257e-15, 0, 0.99999994, -8.4703295e-22, 7.105425e-15, 0, 1, 0, 0, 0)
@@ -598,6 +595,12 @@ skeleton = NodePath("")
 
 [node name="FrontRight" type="VehicleWheel3D" parent="."]
 transform = Transform3D(2.1061629e-08, 0, 0.23479326, -0.27896973, -4.5449937e-08, 1.7726398e-08, 4.5449937e-08, -0.27896973, -2.8879967e-15, -0.67868495, 0.23582578, 1.2889229)
+use_as_steering = true
+wheel_roll_influence = 0.01
+wheel_rest_length = 0.2
+wheel_friction_slip = 1.4
+suspension_travel = 0.15
+suspension_stiffness = 120.0
 
 [node name="Front tire_2_Tyre_0" type="MeshInstance3D" parent="FrontRight"]
 transform = Transform3D(0.99999994, 0, 7.1054257e-15, 0, 0.99999994, -8.4703295e-22, 7.105425e-15, 0, 1, 0, 0, 0)
@@ -611,6 +614,12 @@ skeleton = NodePath("")
 
 [node name="BackRight" type="VehicleWheel3D" parent="."]
 transform = Transform3D(2.1061629e-08, 0, 0.23479326, -0.27896973, -4.5449937e-08, 1.7726398e-08, 4.5449937e-08, -0.27896973, -2.8879967e-15, -0.67868495, 0.23582539, -1.1648521)
+use_as_traction = true
+wheel_roll_influence = 0.01
+wheel_rest_length = 0.02
+wheel_friction_slip = 1.1
+suspension_travel = 0.15
+suspension_stiffness = 80.0
 
 [node name="Rear tire_2_Tyre_0" type="MeshInstance3D" parent="BackRight"]
 transform = Transform3D(0.99999994, 0, 7.1054257e-15, 0, 0.99999994, -8.4703295e-22, 7.105425e-15, 0, 1, 0, 0, 0)
@@ -624,6 +633,12 @@ skeleton = NodePath("")
 
 [node name="Backleft" type="VehicleWheel3D" parent="."]
 transform = Transform3D(2.1061629e-08, 0, 0.23479326, -0.27896973, -4.5449937e-08, 1.7726398e-08, 4.5449937e-08, -0.27896973, -2.8879967e-15, 0.67868507, 0.23582533, -1.1648521)
+use_as_traction = true
+wheel_roll_influence = 0.01
+wheel_rest_length = 0.02
+wheel_friction_slip = 1.1
+suspension_travel = 0.15
+suspension_stiffness = 80.0
 
 [node name="Rear tire_1_Tyre_0" type="MeshInstance3D" parent="Backleft"]
 transform = Transform3D(0.99999994, 0, 7.1054257e-15, 0, 0.99999994, -8.4703295e-22, 7.105425e-15, 0, 1, 0, 0, 0)
@@ -634,3 +649,6 @@ skeleton = NodePath("")
 transform = Transform3D(0.99999994, 0, 7.1054257e-15, 0, 0.99999994, -8.4703295e-22, 7.105425e-15, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_tkvps")
 skeleton = NodePath("")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -1.5180808e-08, 8.609463e-08, 0, 0.9848078, 0.1736482, -8.742278e-08, 0.1736482, -0.9848078, 0, 2.2269492, -3.68444)
