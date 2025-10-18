@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=4 uid="uid://ccjhokf7ce21x"]
 
 [ext_resource type="Texture2D" uid="uid://cfcl1657f3irx" path="res://assets/taxi_0.png" id="1_1u2ly"]
-[ext_resource type="Script" uid="uid://wyjt765bfv7o" path="res://general_scripts/car.gd" id="1_fa4og"]
+[ext_resource type="Script" uid="uid://bo0f7y2rixbf6" path="res://general_scripts/player.gd" id="1_fa4og"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggc4e"]
 resource_name = "Taxi_car"
@@ -255,6 +255,9 @@ height = 0.25
 radial_segments = 12
 
 [node name="Player" type="VehicleBody3D"]
+gravity_scale = 4.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.6, 0.6)
 script = ExtResource("1_fa4og")
 
 [node name="Taxi_Taxi car_0" type="MeshInstance3D" parent="."]
@@ -316,13 +319,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.6)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, -1.5180808e-08, 8.609463e-08, 0, 0.9848078, 0.1736482, -8.742278e-08, 0.1736482, -0.9848078, 0, 2.2269492, -3.68444)
-visible = false
 
 [node name="front_left_wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0381316, 0, 1.2551438)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59520483, 0.19016695, 1.2647517)
 use_as_steering = true
+wheel_roll_influence = 0.01
 wheel_radius = 0.4
-suspension_stiffness = 50.0
+wheel_rest_length = 0.2
+wheel_friction_slip = 1.4
+suspension_travel = 0.15
+suspension_stiffness = 120.0
 damping_compression = 1.9
 damping_relaxation = 2.0
 
@@ -331,10 +337,14 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 mesh = SubResource("CylinderMesh_fa4og")
 
 [node name="front_right_wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9757415, 0, 1.2551438)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.658, 0.19, 1.255)
 use_as_steering = true
+wheel_roll_influence = 0.01
 wheel_radius = 0.4
-suspension_stiffness = 50.0
+wheel_rest_length = 0.2
+wheel_friction_slip = 1.4
+suspension_travel = 0.15
+suspension_stiffness = 120.0
 damping_compression = 1.9
 damping_relaxation = 2.0
 
@@ -343,10 +353,14 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 mesh = SubResource("CylinderMesh_fa4og")
 
 [node name="back_left_wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0381316, 0, -1.0735763)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59520483, 0.19016695, -1.0639684)
 use_as_traction = true
+wheel_roll_influence = 0.01
 wheel_radius = 0.4
-suspension_stiffness = 50.0
+wheel_rest_length = 0.2
+wheel_friction_slip = 1.1
+suspension_travel = 0.15
+suspension_stiffness = 80.0
 damping_compression = 1.9
 damping_relaxation = 2.0
 
@@ -355,10 +369,14 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 mesh = SubResource("CylinderMesh_fa4og")
 
 [node name="back_right_wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9757415, 0, -1.0735763)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.658, 0.19, -1.074)
 use_as_traction = true
+wheel_roll_influence = 0.01
 wheel_radius = 0.4
-suspension_stiffness = 50.0
+wheel_rest_length = 0.2
+wheel_friction_slip = 1.1
+suspension_travel = 0.15
+suspension_stiffness = 80.0
 damping_compression = 1.9
 damping_relaxation = 2.0
 

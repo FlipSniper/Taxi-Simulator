@@ -6,13 +6,13 @@ const ENGINE_POWER = 300
 const BRAKE_POWER = 50
 
 # Nodes
-@onready var front_left_wheel = $FrontLeft
-@onready var front_right_wheel = $FrontRight
-@onready var rear_left_wheel = $Backleft
-@onready var rear_right_wheel = $BackRight
+@onready var front_left_wheel = $front_left_wheel
+@onready var front_right_wheel = $front_right_wheel
+@onready var rear_left_wheel = $back_left_wheel
+@onready var rear_right_wheel = $back_right_wheel
 
 func _physics_process(delta: float) -> void:
-	var steer_input = Input.get_axis("left", "right")
+	var steer_input = Input.get_axis("right","left")
 	var engine_input = Input.get_axis("down", "up")
 	var brake_input = Input.is_action_pressed("brake")
 	
