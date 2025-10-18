@@ -78,7 +78,10 @@ mesh = SubResource("BoxMesh_xg2ei")
 transform = Transform3D(10.745, 0, 0, 0, 10.745, 0, 0, 0, 10.745, 0.42224503, 0, 144.84369)
 mesh = SubResource("BoxMesh_xg2ei")
 
-[node name="Player" parent="town" instance=ExtResource("2_hqpy3")]
+[node name="Player" parent="." instance=ExtResource("2_hqpy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.714493, 3.6561766, -6.0934696)
 
-[editable path="town/Player"]
+[node name="spawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.88389, 4.4925203, -6.0958014)
+
+[editable path="Player"]

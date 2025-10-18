@@ -2,10 +2,11 @@ extends VehicleBody3D
 
 # Car settings
 const MAX_STEER = 0.5
-const ENGINE_POWER = 300
+const ENGINE_POWER = 2300
 const BRAKE_POWER = 50
 
 # Nodes
+@export var spawn : Node3D
 @onready var front_left_wheel = $front_left_wheel
 @onready var front_right_wheel = $front_right_wheel
 @onready var rear_left_wheel = $back_left_wheel
@@ -26,3 +27,6 @@ func _physics_process(delta: float) -> void:
 	front_right_wheel.brake = brake_force
 	rear_left_wheel.brake = brake_force
 	rear_right_wheel.brake = brake_force
+
+func toggle_spawn():
+	global_position = spawn.global_position

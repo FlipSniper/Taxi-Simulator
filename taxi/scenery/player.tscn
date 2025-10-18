@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=4 uid="uid://ccjhokf7ce21x"]
+[gd_scene load_steps=29 format=4 uid="uid://ccjhokf7ce21x"]
 
 [ext_resource type="Texture2D" uid="uid://cfcl1657f3irx" path="res://assets/taxi_0.png" id="1_1u2ly"]
 [ext_resource type="Script" uid="uid://bo0f7y2rixbf6" path="res://general_scripts/player.gd" id="1_fa4og"]
+[ext_resource type="PackedScene" uid="uid://bc6j0gn5pxal7" path="res://scenery/ui.tscn" id="3_aac0b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggc4e"]
 resource_name = "Taxi_car"
@@ -255,9 +256,9 @@ height = 0.25
 radial_segments = 12
 
 [node name="Player" type="VehicleBody3D"]
-gravity_scale = 4.0
+mass = 800.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0.6, 0.6)
+center_of_mass = Vector3(0, -1, 0.6)
 script = ExtResource("1_fa4og")
 
 [node name="Taxi_Taxi car_0" type="MeshInstance3D" parent="."]
@@ -383,3 +384,5 @@ damping_relaxation = 2.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="back_right_wheel"]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CylinderMesh_fa4og")
+
+[node name="UI" parent="." instance=ExtResource("3_aac0b")]
