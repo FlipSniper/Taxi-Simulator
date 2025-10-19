@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c68juiwxwffj1"]
+[gd_scene load_steps=5 format=3 uid="uid://c68juiwxwffj1"]
+
+[ext_resource type="Script" uid="uid://cekblw540su5o" path="res://general_scripts/destination.gd" id="1_7bn5g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_od7fc"]
 size = Vector3(5, 5, 5)
@@ -9,6 +11,7 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_u0lhm"]
 
 [node name="destination" type="Node3D"]
+script = ExtResource("1_7bn5g")
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -17,7 +20,6 @@ shape = SubResource("BoxShape3D_od7fc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.9931493, 0, 0, 0, 5.9931493, 0, 0, 0, 5.9931493, 0, 0, 0)
-visible = false
 layers = 2
 material_override = SubResource("StandardMaterial3D_7bn5g")
 mesh = SubResource("SphereMesh_u0lhm")
