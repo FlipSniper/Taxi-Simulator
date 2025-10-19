@@ -13,7 +13,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if money != prev_money:
 		prev_money = money
-		$default/money.text = str(money)
+		$default/money.text = "Money :$"+str(money)
 
 	speed_label.text = str(round(player.speed_mph)) + " mph"
 
@@ -38,6 +38,7 @@ func _process(delta: float) -> void:
 			$soldier/Label.visible = false
 			$soldier/Label2.visible = false
 		else:
+			print("herreeeeeee")
 			$soldier/Label5.visible = false
 			if !challenge:
 				challenge = true
@@ -56,6 +57,7 @@ func _process(delta: float) -> void:
 				$soldier/Label2.visible = false
 		if player.customer_dropped:
 			money += 50
+			player.customer_dropped= false
 
 
 func show_customer_left_message() -> void:

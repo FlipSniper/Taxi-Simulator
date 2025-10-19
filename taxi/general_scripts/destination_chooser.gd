@@ -6,8 +6,8 @@ extends Node3D
 
 var destination
 func choose_destination():
-	destination = destinations[rng.randi_range(0, destinations.size() - 1)]
-
+	#destination = destinations[rng.randi_range(0, destinations.size() - 1)]
+	destination = destinations[0]
 	destination.assigned = true
 
 func remove_destination():
