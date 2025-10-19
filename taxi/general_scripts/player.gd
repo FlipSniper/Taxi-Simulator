@@ -19,6 +19,7 @@ var steady_warning = false
 var steady_active = false
 var steady_start_timer = 0.0
 var speed_mph = 0.0
+var customer_dropped = false
 
 @export var spawn : Node3D
 @onready var front_left_wheel = $front_left_wheel
@@ -31,6 +32,8 @@ func _physics_process(delta: float) -> void:
 	var steer_input = Input.get_axis("right", "left")
 	var engine_input = Input.get_axis("down", "up")
 	var brake_input = Input.is_action_pressed("brake")
+	if engine_input == 0:
+		$rev.play()
 
 	front_left_wheel.steering = steer_input * MAX_STEER
 	front_right_wheel.steering = steer_input * MAX_STEER
@@ -45,7 +48,6 @@ func _physics_process(delta: float) -> void:
 
 	var speed_mps = linear_velocity.length()
 	speed_mph = speed_mps * 2.23694
-	print(speed_mph)
 
 	if customer_onboard and requirement == "steady":
 		if not steady_active:
@@ -66,6 +68,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pick_up"):
 		print(!customer_onboard, customer)
 	if customer and Input.is_action_just_pressed("pick_up") and !customer_onboard:
+		customer_dropped = false
 		destination.choose_destination()
 		print("trying")
 		customer_onboard = true
@@ -113,6 +116,20 @@ func fail_steady_requirement() -> void:
 	steady_warning = false
 	requirement = null
 	customer_onboard = false
+	customer_type = ""
 	customer = false
 	steady_active = false
 	steady_timer = 0.0
+
+
+func destination_drop(area: Area3D) -> void:
+	if area.name == "destination":
+		destination.remove_destination()
+		customer_dropped = true
+		steady_warning = false
+		requirement = null
+		customer_onboard = false
+		customer_type = ""
+		customer = false
+		steady_active = false
+		steady_timer = 0.0

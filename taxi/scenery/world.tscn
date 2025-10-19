@@ -161,15 +161,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.7935, 0, 123.20391)
 [node name="spawn11" type="Node3D" parent="CustomerSpawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.22304, 0, 185.20328)
 
-[node name="Destinations" type="Node3D" parent="."]
+[node name="Destinations" type="Node3D" parent="." node_paths=PackedStringArray("destinations")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2563972, 0)
 script = ExtResource("5_nadti")
+destinations = [NodePath("destination1"), NodePath("destination2"), NodePath("destination3"), NodePath("destination4"), NodePath("destination5"), NodePath("destination6"), NodePath("destination7"), NodePath("destination8"), NodePath("destination9"), NodePath("destination10"), NodePath("destination11"), NodePath("destination12"), NodePath("destination13"), NodePath("destination14")]
 
 [node name="destination1" parent="Destinations" instance=ExtResource("5_m1d62")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.699392, 0, -7.1788845)
 
 [node name="destination2" parent="Destinations" instance=ExtResource("5_m1d62")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.673847, 0, -8.183502)
+
+[node name="destination3" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.434681, 0, 57.915215)
 
 [node name="destination4" parent="Destinations" instance=ExtResource("5_m1d62")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.243484, 0, -24.487724)
@@ -203,8 +207,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.530655, 0, 166.76097)
 
 [node name="destination14" parent="Destinations" instance=ExtResource("5_m1d62")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5382862, 0, 134.28088)
-
-[node name="destination3" parent="Destinations" instance=ExtResource("5_m1d62")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.434681, 0, 57.915215)
 
 [editable path="Player"]

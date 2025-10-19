@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=4 uid="uid://ccjhokf7ce21x"]
+[gd_scene load_steps=29 format=4 uid="uid://ccjhokf7ce21x"]
 
 [ext_resource type="Texture2D" uid="uid://cfcl1657f3irx" path="res://assets/taxi_0.png" id="1_1u2ly"]
 [ext_resource type="Script" uid="uid://bo0f7y2rixbf6" path="res://general_scripts/player.gd" id="1_fa4og"]
 [ext_resource type="PackedScene" uid="uid://bc6j0gn5pxal7" path="res://scenery/ui.tscn" id="3_aac0b"]
+[ext_resource type="AudioStream" uid="uid://kekm1eytgjvy" path="res://sounds/car-engine-372477.mp3" id="4_a5pw6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggc4e"]
 resource_name = "Taxi_car"
@@ -382,5 +383,9 @@ shape = SubResource("BoxShape3D_aac0b")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0072021484, 0.61367464, 0.052619934)
 shape = SubResource("BoxShape3D_a5pw6")
 
+[node name="rev" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_a5pw6")
+
+[connection signal="area_entered" from="Area3D" to="." method="destination_drop"]
 [connection signal="body_entered" from="Area3D" to="." method="customer_in"]
 [connection signal="body_exited" from="Area3D" to="." method="customer_out"]

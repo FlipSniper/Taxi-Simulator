@@ -25,11 +25,17 @@ offset_top = 622.0
 offset_right = 40.0
 offset_bottom = 645.0
 
-[node name="Button2" type="Button" parent="default"]
+[node name="Dictionary" type="Button" parent="default"]
 offset_right = 157.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 30
 text = "Signal Dictionary"
+
+[node name="money" type="Label" parent="default"]
+offset_left = 1.0
+offset_top = 276.0
+offset_right = 41.0
+offset_bottom = 299.0
 
 [node name="signs" type="CanvasLayer" parent="."]
 
@@ -152,3 +158,5 @@ visible = false
 offset_top = 541.0
 offset_right = 40.0
 offset_bottom = 564.0
+
+[connection signal="pressed" from="default/Dictionary" to="." method="dictionary"]
