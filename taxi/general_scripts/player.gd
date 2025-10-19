@@ -25,6 +25,7 @@ var speed_mph = 0.0
 @onready var front_right_wheel = $front_right_wheel
 @onready var rear_left_wheel = $back_left_wheel
 @onready var rear_right_wheel = $back_right_wheel
+@onready var destination = get_tree().current_scene.get_node_or_null("Destinations")
 
 func _physics_process(delta: float) -> void:
 	var steer_input = Input.get_axis("right", "left")
@@ -65,6 +66,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pick_up"):
 		print(!customer_onboard, customer)
 	if customer and Input.is_action_just_pressed("pick_up") and !customer_onboard:
+		destination.choose_destination()
 		print("trying")
 		customer_onboard = true
 		if customer_type == "soldier":
@@ -107,6 +109,7 @@ func check_steady_speed(delta: float) -> void:
 
 func fail_steady_requirement() -> void:
 	print("Failed steady speed requirement! Customer angry")
+	destination.remove_destination()
 	steady_warning = false
 	requirement = null
 	customer_onboard = false

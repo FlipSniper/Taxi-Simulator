@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjy11s7o4sqyp"]
+[gd_scene load_steps=12 format=3 uid="uid://cjy11s7o4sqyp"]
 
 [ext_resource type="PackedScene" uid="uid://2f2dbmnk18yf" path="res://scenery/town.tscn" id="1_xg2ei"]
 [ext_resource type="PackedScene" uid="uid://ccjhokf7ce21x" path="res://scenery/player.tscn" id="2_hqpy3"]
 [ext_resource type="Script" uid="uid://dxwf3ti1ngl06" path="res://general_scripts/spawner.gd" id="3_rn4at"]
 [ext_resource type="PackedScene" uid="uid://bqmfa7yxk4yfb" path="res://scenery/customer.tscn" id="4_1okxe"]
+[ext_resource type="PackedScene" uid="uid://c68juiwxwffj1" path="res://scenery/destination.tscn" id="5_m1d62"]
+[ext_resource type="Script" uid="uid://cxuc80yg8plhv" path="res://general_scripts/destination_chooser.gd" id="5_nadti"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hqpy3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -158,5 +160,51 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.7935, 0, 123.20391)
 
 [node name="spawn11" type="Node3D" parent="CustomerSpawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.22304, 0, 185.20328)
+
+[node name="Destinations" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2563972, 0)
+script = ExtResource("5_nadti")
+
+[node name="destination1" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.699392, 0, -7.1788845)
+
+[node name="destination2" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.673847, 0, -8.183502)
+
+[node name="destination4" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.243484, 0, -24.487724)
+
+[node name="destination5" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.48419, 0, 39.482758)
+
+[node name="destination6" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.117134, 0, 53.170784)
+
+[node name="destination7" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.117134, 0, 99.091866)
+
+[node name="destination8" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.117134, 0, 11.059063)
+
+[node name="destination9" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.651642, 0, 120.21574)
+
+[node name="destination10" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.42346, 0, 120.21574)
+
+[node name="destination11" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.00608, 0, 183.6951)
+
+[node name="destination12" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5419273, 0, 183.6951)
+
+[node name="destination13" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.530655, 0, 166.76097)
+
+[node name="destination14" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5382862, 0, 134.28088)
+
+[node name="destination3" parent="Destinations" instance=ExtResource("5_m1d62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.434681, 0, 57.915215)
 
 [editable path="Player"]
