@@ -6,4 +6,7 @@ I got inspired by traffic signals but didn't even get time to add that to my gam
 I have no idea how I didn't get time.
 Well lots of bugs. First you either get infinite or 0 cash when dropping a customer off.
 A minimap shows locations of anything you need to know
+
+
+
 _**R to respawn**_
