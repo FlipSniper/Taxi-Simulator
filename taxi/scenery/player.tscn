@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://ccjhokf7ce21x"]
+[gd_scene load_steps=28 format=4 uid="uid://ccjhokf7ce21x"]
 
 [ext_resource type="Texture2D" uid="uid://cfcl1657f3irx" path="res://assets/taxi_0.png" id="1_1u2ly"]
 [ext_resource type="Script" uid="uid://bo0f7y2rixbf6" path="res://general_scripts/player.gd" id="1_fa4og"]
@@ -42,9 +42,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pdwad")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1u2ly"]
-points = PackedVector3Array(-1.0547816, -2.1628845, 0.032593578, -1.03888, -2.1783116, -0.4951937, -1.03888, -2.5267522, -0.4951937, -1.03888, -2.5267522, -0.32756156, -1.0000552, -2.3639693, 0.15162936, -1.0000552, -2.3421586, 0.17906007, -1.0233914, -2.1634164, 0.20530549, -1.0233914, -0.63240516, 0.25728837, -1.0547816, -0.63187325, 0.074416965, -1.0547816, 2.7892292, 0.074416965, -1.0302063, 2.9078586, -0.4951937, 1.0388626, -2.5267522, -0.4951937, 1.0388626, -2.5267522, -0.32756156, 1.000038, -2.3639693, 0.15162936, 1.000038, -2.3421586, 0.17906007, -1.0000552, -2.2825778, 0.20869198, -1.0000552, -2.2017183, 0.23290554, -0.8573537, -0.120117664, 1.020438, -0.8573537, 1.1199057, 1.020438, -1.0000552, 2.6072953, 0.29335472, -1.0000552, 2.773802, 0.2620295, -1.0101744, 2.7791216, 0.2220687, -1.0302063, 2.9078586, -0.32756156, 1.0301892, 2.9078586, -0.4951937, 1.0388626, -2.1783116, -0.4951937, 1.0549709, -2.1628845, 0.032593578, 1.0233742, -2.1634164, 0.20530549, 1.000038, -2.2825778, 0.20869198, -0.10605383, 0.17033839, 1.2346346, -0.10605383, 0.8161504, 1.2346346, 1.000038, 2.773802, 0.2620295, 1.0301892, 2.9078586, -0.32756156, 1.0549709, 2.7892292, 0.074416965, 1.0549709, -0.63187325, 0.074416965, 1.0233742, -0.63240516, 0.25728837, 1.000038, -2.2017183, 0.23290554, 0.8573364, -0.17384672, 1.020438, 0.106036544, 0.17033839, 1.2346346, 0.106036544, 0.8161504, 1.2346346, 1.0101572, 2.7791216, 0.2220687, 0.8573364, 1.1199057, 1.020438, 1.000038, 2.6072953, 0.29335472)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6yuk"]
 resource_name = "Taxi_black"
 cull_mode = 2
@@ -81,9 +78,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lmali")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fa4og"]
-points = PackedVector3Array(-1.3238807, -0.6172508, 0.36756915, -1.3238807, -0.6172508, 0.50744414, -1.3238807, -0.5671277, 0.36756915, -1.0491805, -0.59598637, -0.24876623, -1.0833241, -2.103476, 0.058145106, -1.3238807, -0.5671277, 0.50744414, -1.0595272, -2.103476, 0.19060156, -1.2967211, -0.62484515, 0.5270673, -0.8365596, -0.08070588, 0.9434616, -1.0543538, 1.4552627, 0.18007204, -1.0491805, 1.4731097, -0.24876623, -0.903036, -2.3400419, -0.27891892, -0.903036, -2.3400419, 0.025001049, -0.8365596, 0.3324299, 0.9434616, -0.8370769, 1.07896, 0.93987197, -1.0543538, 1.4552627, 0.23224097, 1.0594401, -2.103476, 0.19060156, -0.7819817, -0.1426003, 0.9307783, 0.83647275, -0.08070588, 0.9434616, -1.0491805, 1.4731097, -0.162855, -0.89889735, 1.539181, 0.3493818, 1.0490937, 1.4731097, -0.24876623, 0.9029491, -2.3400419, -0.27891892, 0.9029491, -2.3400419, 0.025001049, 0.83647275, 0.3324299, 0.9434616, 0.8369901, 1.07896, 0.93987197, -0.7819817, 1.1427529, 0.930898, -0.95347524, 1.5129802, 0.36194545, 1.0834959, -2.103476, 0.058145106, 1.3186204, -0.6172508, 0.50744414, 1.2912023, -0.62484515, 0.5270673, 0.7818949, -0.1426003, 0.9307783, 0.8988104, 1.539181, 0.3493818, 1.0490937, 1.4731097, -0.162855, 1.0542669, 1.4552627, 0.18007204, 1.3186204, -0.5671277, 0.36756915, 1.0490937, -0.59598637, -0.24876623, 1.3186204, -0.5671277, 0.50744414, 1.0542669, 1.4552627, 0.23224097, 0.95338845, 1.5129802, 0.36194545, 0.7818949, 1.1427529, 0.930898, 1.3186204, -0.6172508, 0.36756915)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff0f5"]
 resource_name = "Taxi_TEXTURE"
@@ -123,9 +117,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t1mu6")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aac0b"]
-points = PackedVector3Array(-0.13671522, 0.083309084, 1.0204483, 0.13690455, 0.083309084, 1.0204483, -0.10588746, 0.17063323, 1.2346135, -0.13671522, 0.9170506, 1.0204483, 0.106050014, 0.17063323, 1.2346135, 0.13690455, 0.9170506, 1.0204483, -0.10588746, 0.81634223, 1.2346135, 0.106050014, 0.81634223, 1.2346135)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ayny"]
 resource_name = "Glass"
 cull_mode = 2
@@ -163,9 +154,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_trjte")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a5pw6"]
-points = PackedVector3Array(-1.24779, -0.5653691, 0.35257363, -1.24779, -0.5653691, 0.52250266, 1.2425302, -0.5653691, 0.35257363, 1.2425302, -0.5653691, 0.52250266)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ugk5m"]
 resource_name = "White_lights"
@@ -205,9 +193,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dg3f4")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_37nmn"]
-points = PackedVector3Array(-0.72144186, -2.386558, -0.24411052, -0.7864302, -2.386558, -0.22674744, 0.7214649, -2.386558, -0.24411052, -0.83375496, -2.386558, -0.17930356, 0.7862865, -2.386558, -0.22674744, -0.8510852, -2.386558, -0.11447121, 0.8337779, -2.386558, -0.17930356, -0.83375496, -2.386558, -0.049638867, 0.8512747, -2.386558, -0.11447121, -0.7864302, -2.386558, -0.002169609, 0.8337779, -2.386558, -0.049638867, -0.72144186, -2.386558, 0.015218854, 0.7862865, -2.386558, -0.002169609, 0.7214649, -2.386558, 0.015218854)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qaord"]
 resource_name = "Yellow_lights"
 cull_mode = 2
@@ -246,9 +231,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nhc4x")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qh6nc"]
-points = PackedVector3Array(-0.72144186, 2.7948558, -0.24411029, -0.7864302, 2.7948558, -0.2267472, -0.37100503, 2.80674, -0.24411029, 0.7214649, 2.7948558, -0.24411029, -0.83375496, 2.7948558, -0.17930332, -0.48331812, 2.80674, -0.17930332, -0.43582666, 2.80674, -0.2267472, 0.37102795, 2.80674, -0.24411029, 0.7862865, 2.7948558, -0.2267472, -0.8510852, 2.7948558, -0.11447097, -0.5006483, 2.80674, -0.11447097, 0.43584967, 2.80674, -0.2267472, 0.8337779, 2.7948558, -0.17930332, -0.83375496, 2.7948558, -0.04963863, -0.48331812, 2.80674, -0.04963863, 0.4833411, 2.80674, -0.17930332, 0.8512747, 2.7948558, -0.11447097, -0.7864302, 2.7948558, -0.0021693707, -0.43582666, 2.80674, -0.0021693707, 0.50067127, 2.80674, -0.11447097, 0.8337779, 2.7948558, -0.04963863, 0.4833411, 2.80674, -0.04963863, -0.72144186, 2.7948558, 0.015219092, -0.37100503, 2.80674, 0.015219092, 0.7862865, 2.7948558, -0.0021693707, 0.43584967, 2.80674, -0.0021693707, 0.7214649, 2.7948558, 0.015219092, 0.37102795, 2.80674, 0.015219092)
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_fa4og"]
 top_radius = 0.4
 bottom_radius = 0.4
@@ -260,67 +242,54 @@ albedo_color = Color(0, 0, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_a5pw6"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_37nmn"]
+size = Vector3(5, 3.67, 6.805)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aac0b"]
+size = Vector3(1, 0.58444214, 1.6219482)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a5pw6"]
+size = Vector3(1.486084, 0.59008026, 3.8036346)
+
 [node name="Player" type="VehicleBody3D"]
 mass = 800.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0.6)
 script = ExtResource("1_fa4og")
 
-[node name="Taxi_Taxi car_0" type="MeshInstance3D" parent="."]
+[node name="body" type="Node3D" parent="."]
+
+[node name="Taxi_Taxi car_0" type="MeshInstance3D" parent="body"]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
 mesh = SubResource("ArrayMesh_xf3ny")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-shape = SubResource("ConvexPolygonShape3D_1u2ly")
-
-[node name="Taxi_Taxi black_0" type="MeshInstance3D" parent="."]
+[node name="Taxi_Taxi black_0" type="MeshInstance3D" parent="body"]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
 mesh = SubResource("ArrayMesh_hhssc")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-shape = SubResource("ConvexPolygonShape3D_fa4og")
-
-[node name="Taxi_Taxi TEXTURE_0" type="MeshInstance3D" parent="."]
+[node name="Taxi_Taxi TEXTURE_0" type="MeshInstance3D" parent="body"]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
 mesh = SubResource("ArrayMesh_7c4nl")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-shape = SubResource("ConvexPolygonShape3D_aac0b")
-
-[node name="Taxi_Glass_0" type="MeshInstance3D" parent="."]
+[node name="Taxi_Glass_0" type="MeshInstance3D" parent="body"]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
 mesh = SubResource("ArrayMesh_snpr7")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-shape = SubResource("ConvexPolygonShape3D_a5pw6")
-
-[node name="Taxi_White lights_0" type="MeshInstance3D" parent="."]
+[node name="Taxi_White lights_0" type="MeshInstance3D" parent="body"]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
 mesh = SubResource("ArrayMesh_3hgvq")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-shape = SubResource("ConvexPolygonShape3D_37nmn")
-
-[node name="Taxi_Yellow lights_0" type="MeshInstance3D" parent="."]
+[node name="Taxi_Yellow lights_0" type="MeshInstance3D" parent="body"]
 transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
 mesh = SubResource("ArrayMesh_t4l0i")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.6977445, 0, 0, 0, -1.13677e-07, 0.6977445, 0, -0.6977445, -1.13677e-07, -9.4665724e-05, 0.6795709, 0.20513079)
-shape = SubResource("ConvexPolygonShape3D_qh6nc")
-
-[node name="CentreOfMass" type="Node3D" parent="."]
+[node name="CentreOfMass" type="Node3D" parent="body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.6)
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -335,7 +304,7 @@ wheel_radius = 0.4
 wheel_rest_length = 0.2
 wheel_friction_slip = 1.4
 suspension_travel = 0.15
-suspension_stiffness = 120.0
+suspension_stiffness = 90.0
 damping_compression = 1.9
 damping_relaxation = 2.0
 
@@ -351,7 +320,7 @@ wheel_radius = 0.4
 wheel_rest_length = 0.2
 wheel_friction_slip = 1.4
 suspension_travel = 0.15
-suspension_stiffness = 120.0
+suspension_stiffness = 90.0
 damping_compression = 1.9
 damping_relaxation = 2.0
 
@@ -398,3 +367,20 @@ transform = Transform3D(14.402384, 0, 0, 0, 14.402384, 0, 0, 0, 14.402384, 0, 0,
 layers = 2
 material_override = SubResource("StandardMaterial3D_aac0b")
 mesh = SubResource("SphereMesh_a5pw6")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1453291, 0)
+shape = SubResource("BoxShape3D_37nmn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1095428, -0.13189697)
+shape = SubResource("BoxShape3D_aac0b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0072021484, 0.61367464, 0.052619934)
+shape = SubResource("BoxShape3D_a5pw6")
+
+[connection signal="body_entered" from="Area3D" to="." method="customer_in"]
+[connection signal="body_exited" from="Area3D" to="." method="customer_out"]

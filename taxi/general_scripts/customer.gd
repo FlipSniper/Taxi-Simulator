@@ -1,6 +1,4 @@
 extends Node3D
+class_name Customer
 
-
-
-func taxi_pick(body: Node3D) -> void:
-	pass # Replace with function body.
+@export var type : String

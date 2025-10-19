@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqmfa7yxk4yfb"]
+[gd_scene load_steps=6 format=3 uid="uid://bqmfa7yxk4yfb"]
 
+[ext_resource type="Script" uid="uid://df238pbyekapa" path="res://general_scripts/customer.gd" id="1_4h8im"]
 [ext_resource type="PackedScene" uid="uid://c83fkde74td8t" path="res://scenery/human_type_1.tscn" id="1_w3lai"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3lai"]
@@ -11,6 +12,8 @@ albedo_color = Color(0, 1, 0, 1)
 size = Vector3(4, 4, 4)
 
 [node name="customer" type="Node3D"]
+script = ExtResource("1_4h8im")
+type = "soldier"
 
 [node name="Human_type1" parent="." instance=ExtResource("1_w3lai")]
 
