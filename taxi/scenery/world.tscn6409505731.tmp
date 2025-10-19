@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2f2dbmnk18yf" path="res://scenery/town.tscn" id="1_xg2ei"]
 [ext_resource type="PackedScene" uid="uid://ccjhokf7ce21x" path="res://scenery/player.tscn" id="2_hqpy3"]
 [ext_resource type="Script" uid="uid://dxwf3ti1ngl06" path="res://general_scripts/spawner.gd" id="3_rn4at"]
-[ext_resource type="PackedScene" uid="uid://bqmfa7yxk4yfb" path="res://scenery/customer.tscn" id="4_1okxe"]
+[ext_resource type="PackedScene" uid="uid://c83fkde74td8t" path="res://scenery/human_type_1.tscn" id="4_1okxe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hqpy3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -136,7 +136,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.843807, 0, -8.426275)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.054867, 0, 11.625959)
 
 [node name="spawn4" type="Node3D" parent="CustomerSpawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.054032, 6.414356, 0, 59.456287)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.414356, 0, 59.456287)
 
 [node name="spawn5" type="Node3D" parent="CustomerSpawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.814564, 0, 55.706646)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqmfa7yxk4yfb"]
+[gd_scene load_steps=5 format=3 uid="uid://bqmfa7yxk4yfb"]
 
 [ext_resource type="PackedScene" uid="uid://c83fkde74td8t" path="res://scenery/human_type_1.tscn" id="1_w3lai"]
 
@@ -7,12 +7,20 @@ albedo_color = Color(0, 1, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_4h8im"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_w3lai"]
+size = Vector3(4, 4, 4)
+
 [node name="customer" type="Node3D"]
 
 [node name="Human_type1" parent="." instance=ExtResource("1_w3lai")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.5001464, 0, 0, 0, 6.5001464, 0, 0, 0, 6.5001464, 0, 0, 0)
+transform = Transform3D(10.71989, 0, 0, 0, 10.71989, 0, 0, 0, 10.71989, 0, 0, 0)
 layers = 2
 material_override = SubResource("StandardMaterial3D_w3lai")
 mesh = SubResource("SphereMesh_4h8im")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_w3lai")
