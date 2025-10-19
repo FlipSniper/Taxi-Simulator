@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc6j0gn5pxal7"]
+[gd_scene load_steps=3 format=3 uid="uid://bc6j0gn5pxal7"]
 
 [ext_resource type="Script" uid="uid://dvu25cmmgmino" path="res://general_scripts/ui.gd" id="1_uu4ix"]
+[ext_resource type="Texture2D" uid="uid://yk1ofyvajp3c" path="res://textures/Soldier.jpg" id="2_xpycd"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -13,10 +14,141 @@ script = ExtResource("1_uu4ix")
 
 [node name="default" type="CanvasLayer" parent="."]
 
-[node name="Button" type="Button" parent="default"]
-offset_right = 151.0
+[node name="ColorRect" type="ColorRect" parent="default"]
+offset_top = 608.0
+offset_right = 73.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="SpeedOMeter" type="Label" parent="default"]
+offset_top = 622.0
+offset_right = 40.0
+offset_bottom = 645.0
+
+[node name="Button2" type="Button" parent="default"]
+offset_right = 157.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 30
-text = "RESPAWN"
+text = "Signal Dictionary"
 
-[connection signal="pressed" from="default/Button" to="." method="respawn"]
+[node name="signs" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="signs"]
+custom_minimum_size = Vector2(80, 80)
+offset_left = 1066.0
+offset_top = 564.0
+offset_right = 1149.3334
+offset_bottom = 644.0
+expand_mode = 3
+stretch_mode = 4
+
+[node name="dictionary" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="dictionary"]
+offset_top = 45.0
+offset_right = 317.0
+offset_bottom = 652.0
+color = Color(0.24313726, 0.24313726, 0.24313726, 0.5921569)
+
+[node name="TextureRect" type="TextureRect" parent="dictionary"]
+offset_left = 8.0
+offset_top = 58.0
+offset_right = 112.166664
+offset_bottom = 158.0
+texture = ExtResource("2_xpycd")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="dictionary"]
+offset_left = 115.0
+offset_top = 59.0
+offset_right = 313.0
+offset_bottom = 108.0
+text = "Soldier - No NONSENSE
+- maintain a steady speed"
+
+[node name="soldier" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="soldier"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -55.0
+offset_right = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "TOO FAST"
+
+[node name="Label2" type="Label" parent="soldier"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.5
+offset_top = -55.0
+offset_right = 104.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "TOO SLOW"
+
+[node name="Label3" type="Label" parent="soldier"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -360.0
+offset_right = 170.0
+offset_bottom = -305.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Challenge started"
+
+[node name="Label5" type="Label" parent="soldier"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -55.0
+offset_right = 170.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Challenge starts in 5 seconds"
+
+[node name="Label4" type="Label" parent="soldier"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -137.0
+offset_top = -55.0
+offset_right = 137.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Customer Left"
+
+[node name="timer" type="Label" parent="soldier"]
+visible = false
+offset_top = 541.0
+offset_right = 40.0
+offset_bottom = 564.0
